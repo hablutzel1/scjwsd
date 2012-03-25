@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://ts.ch02/" xmlns:tns="http://ts.ch02/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="getTimeAsElapsed" type="tns:getTimeAsElapsed"/>
+
+  <xs:element name="getTimeAsElapsedResponse" type="tns:getTimeAsElapsedResponse"/>
+
+  <xs:element name="getTimeAsString" type="tns:getTimeAsString"/>
+
+  <xs:element name="getTimeAsStringResponse" type="tns:getTimeAsStringResponse"/>
+
+  <xs:complexType name="getTimeAsString">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getTimeAsStringResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getTimeAsElapsed">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getTimeAsElapsedResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

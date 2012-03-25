@@ -1,0 +1,18 @@
+SEI Service Endpoint Interface
+SIB Service implementation Bean
+MEP Message Exchange Pattern <-- Type or pattern for data exchange, for example: 
+request/response: El dominante para RPC
+solicit/response
+
+Para soportar el MEP Request/response es necesraio tener en cuenta algunos puntos sobre la infraestructura:
+
+- Message transport: It is transport protocol agnostic, as it can or should work transparently for HTTP, FTP, etc
+
+- Service contract: WSDL
+
+- Type system: XML Schema type system
+
+Notas sobre soporte multihilo
+-----------------------------
+
+Para proveer soporte multihilo a un servicio expuesto se le debe proveer al Endpoint creado una instancia de ThreadPoolExecutor para que este pueda crear hilos de servicio (?)

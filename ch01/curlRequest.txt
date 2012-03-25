@@ -1,0 +1,1 @@
+curl -d @soapRequest.xml -H "Content-Type: text/xml;charset=UTF-8" -v "http://localhost:9876/ts"
